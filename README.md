@@ -1,2 +1,2 @@
 # Data-Science-Class
-making change in order to move to local
+making change in order to move up to Github
