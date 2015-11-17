@@ -94,15 +94,13 @@ dupmovies = movies[movies.duplicated('title', ) == True]
 print dupmovies
 # calculate the average star rating for each genre, but only include genres with at least 10 movies
 #all genres
-movies.groupby(['genre']).star_rating.mean()
-movies.genre.value_counts()
-movies.groupby(['genre']).size()
 
-'''
+for group, df in movies.groupby(['genre']):
+    if df['genre'].count() >10:
+        print group
+        print df.star_rating.mean()
+        
 
-movies.groupby(['genre']).size()>10)
-movies.groupby(['genre']).star_rating.mean()
-'''
 
 '''
 BONUS
