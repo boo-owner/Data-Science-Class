@@ -92,6 +92,8 @@ movies[movies.duplicated(['title'], take_last=True)]
 frame[frame.duplicated(['key1','key2'],keep=False)]
 dupmovies = movies[movies.duplicated('title', ) == True]
 print dupmovies
+
+#movies.set_index('title').index.get_duplicates()
 # calculate the average star rating for each genre, but only include genres with at least 10 movies
 #all genres
 
